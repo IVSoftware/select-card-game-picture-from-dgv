@@ -58,7 +58,7 @@ Then you make a `BindingList<Card>` and assign it to the `DataSource` property o
         .
     }
 
-Once the data binding is established, you can add and remove cards from the DGV by manipulating the data in the `Cards` collection instead of having to work with the UI control directly.
+As shown above, the data binding lets you add and remove cards from the DGV by manipulating the data in the `Cards` collection instead of having to work with the UI control directly.
 
 ***
 **Handle event**
@@ -125,5 +125,6 @@ Now the image can be retrieved based on the card's value and suit.
 
 Ace of diamonds image: [Boardgame pack v2](https://opengameart.org/content/boardgame-pack) (Creative Commons License) by Kenney Vleugels.
 
-  [1]: https://i.stack.imgur.com/tP7d0.png
+
+  [1]: https://i.stack.imgur.com/Q1rZh.png
   [2]: https://i.stack.imgur.com/Rqq3J.png
