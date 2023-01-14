@@ -11,7 +11,7 @@ namespace select_picture_from_dgv
             pictureBoxCard.Image = getCardImage(Value.Back);
         }
         private readonly string _imageBase;
-        BindingList<Card> Cards = new BindingList<Card>();
+        internal BindingList<Card> Cards { get; } = new BindingList<Card>();
         protected override void OnLoad(EventArgs e)
         {
             base.OnLoad(e);
