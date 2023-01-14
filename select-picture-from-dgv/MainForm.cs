@@ -38,7 +38,6 @@ namespace select_picture_from_dgv
             dataGridViewCards.CurrentCellChanged += onSelectionChanged;
             pictureBoxCard.Click += (sender, e) => dataGridViewCards.CurrentCell = null;
         }
-
         private void onSelectionChanged(object? sender, EventArgs e)
         {
             if (dataGridViewCards.CurrentCell == null)

@@ -6,8 +6,8 @@ Your post states that you want to be able to update a PictureBox when rows or ce
 **DataBinding**
 
 The excellent comment by jmcilhinney suggests data binding. So how _exactly_ would you do that? Basically, you make a class to represent a row of data, for example:
-
-    enum Value { Ace, Two, Three, Four, Five, Six, Seven, Eight, Nine, Ten, Jack, Queen, King, Joker, Back }
+    
+    enum Value { Joker, Ace, Two, Three, Four, Five, Six, Seven, Eight, Nine, Ten, Jack, Queen, King, Back }
     enum Suit { Clubs, Diamonds, Hearts, Spades, }
     class Card
     {
@@ -58,14 +58,37 @@ Then you make a `BindingList<Card>` and assign it to the `DataSource` property o
         .
     }
 
+Once the data binding is established, you can add and remove cards from the DGV by manipulating the data in the `Cards` collection instead of having to work with the UI control directly.
+
+***
+**Handle event**
+
+
+        private void onSelectionChanged(object? sender, EventArgs e)
+        {
+            if (dataGridViewCards.CurrentCell == null)
+            {
+                pictureBoxCard.Image = getCardImage(Value.Back);
+            }
+            else
+            {
+                int row = dataGridViewCards.CurrentCell.RowIndex;
+                if((row != -1) && (row < Cards.Count)) 
+                {
+                    Card card = Cards[row];
+                    pictureBoxCard.Image = getCardImage(card);
+                }
+            }
+        }
+
 ***
 **Load Images**
 
-The other thing you need is some reliable way to locate and load an image. One good way is to set the `Build Action` property of your images to `Embedded resource`.
+You will also need a reliable means to locate and load an image. One good way is to set the `Build Action` property of your images to `Embedded resource`.
 
 [![embed images][2]][2]
 
-Now the image can be retrieved based on the car's value and suit.
+Now the image can be retrieved based on the card's value and suit.
 
     BindingList<Card> Cards = new BindingList<Card>();
     private Image getCardImage(Value value = Value.Joker, Suit? suit = null)
@@ -100,7 +123,7 @@ Now the image can be retrieved based on the car's value and suit.
 ***
 **Credit**
 
-The ace of diamonds image is from [Boardgame pack v2](https://opengameart.org/content/boardgame-pack) (Creative Commons License) by Kenney Vleugels.
+Ace of diamonds image: [Boardgame pack v2](https://opengameart.org/content/boardgame-pack) (Creative Commons License) by Kenney Vleugels.
 
   [1]: https://i.stack.imgur.com/tP7d0.png
   [2]: https://i.stack.imgur.com/Rqq3J.png
