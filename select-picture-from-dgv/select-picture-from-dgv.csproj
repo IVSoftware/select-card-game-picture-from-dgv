@@ -1,0 +1,128 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net7.0-windows</TargetFramework>
+    <RootNamespace>select_picture_from_dgv</RootNamespace>
+    <Nullable>enable</Nullable>
+    <UseWindowsForms>true</UseWindowsForms>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Images\boardgamePack_v2\PNG\Cards\cardClubs10.png" />
+    <None Remove="Images\boardgamePack_v2\PNG\Cards\cardClubs2.png" />
+    <None Remove="Images\boardgamePack_v2\PNG\Cards\cardClubs3.png" />
+    <None Remove="Images\boardgamePack_v2\PNG\Cards\cardClubs4.png" />
+    <None Remove="Images\boardgamePack_v2\PNG\Cards\cardClubs5.png" />
+    <None Remove="Images\boardgamePack_v2\PNG\Cards\cardClubs6.png" />
+    <None Remove="Images\boardgamePack_v2\PNG\Cards\cardClubs7.png" />
+    <None Remove="Images\boardgamePack_v2\PNG\Cards\cardClubs8.png" />
+    <None Remove="Images\boardgamePack_v2\PNG\Cards\cardClubs9.png" />
+    <None Remove="Images\boardgamePack_v2\PNG\Cards\cardClubsA.png" />
+    <None Remove="Images\boardgamePack_v2\PNG\Cards\cardClubsJ.png" />
+    <None Remove="Images\boardgamePack_v2\PNG\Cards\cardClubsK.png" />
+    <None Remove="Images\boardgamePack_v2\PNG\Cards\cardClubsQ.png" />
+    <None Remove="Images\boardgamePack_v2\PNG\Cards\cardDiamonds10.png" />
+    <None Remove="Images\boardgamePack_v2\PNG\Cards\cardDiamonds2.png" />
+    <None Remove="Images\boardgamePack_v2\PNG\Cards\cardDiamonds3.png" />
+    <None Remove="Images\boardgamePack_v2\PNG\Cards\cardDiamonds4.png" />
+    <None Remove="Images\boardgamePack_v2\PNG\Cards\cardDiamonds5.png" />
+    <None Remove="Images\boardgamePack_v2\PNG\Cards\cardDiamonds6.png" />
+    <None Remove="Images\boardgamePack_v2\PNG\Cards\cardDiamonds7.png" />
+    <None Remove="Images\boardgamePack_v2\PNG\Cards\cardDiamonds8.png" />
+    <None Remove="Images\boardgamePack_v2\PNG\Cards\cardDiamonds9.png" />
+    <None Remove="Images\boardgamePack_v2\PNG\Cards\cardDiamondsA.png" />
+    <None Remove="Images\boardgamePack_v2\PNG\Cards\cardDiamondsJ.png" />
+    <None Remove="Images\boardgamePack_v2\PNG\Cards\cardDiamondsK.png" />
+    <None Remove="Images\boardgamePack_v2\PNG\Cards\cardDiamondsQ.png" />
+    <None Remove="Images\boardgamePack_v2\PNG\Cards\cardHearts10.png" />
+    <None Remove="Images\boardgamePack_v2\PNG\Cards\cardHearts2.png" />
+    <None Remove="Images\boardgamePack_v2\PNG\Cards\cardHearts3.png" />
+    <None Remove="Images\boardgamePack_v2\PNG\Cards\cardHearts4.png" />
+    <None Remove="Images\boardgamePack_v2\PNG\Cards\cardHearts5.png" />
+    <None Remove="Images\boardgamePack_v2\PNG\Cards\cardHearts6.png" />
+    <None Remove="Images\boardgamePack_v2\PNG\Cards\cardHearts7.png" />
+    <None Remove="Images\boardgamePack_v2\PNG\Cards\cardHearts8.png" />
+    <None Remove="Images\boardgamePack_v2\PNG\Cards\cardHearts9.png" />
+    <None Remove="Images\boardgamePack_v2\PNG\Cards\cardHeartsA.png" />
+    <None Remove="Images\boardgamePack_v2\PNG\Cards\cardHeartsJ.png" />
+    <None Remove="Images\boardgamePack_v2\PNG\Cards\cardHeartsK.png" />
+    <None Remove="Images\boardgamePack_v2\PNG\Cards\cardHeartsQ.png" />
+    <None Remove="Images\boardgamePack_v2\PNG\Cards\cardJoker.png" />
+    <None Remove="Images\boardgamePack_v2\PNG\Cards\cardSpades10.png" />
+    <None Remove="Images\boardgamePack_v2\PNG\Cards\cardSpades2.png" />
+    <None Remove="Images\boardgamePack_v2\PNG\Cards\cardSpades3.png" />
+    <None Remove="Images\boardgamePack_v2\PNG\Cards\cardSpades4.png" />
+    <None Remove="Images\boardgamePack_v2\PNG\Cards\cardSpades5.png" />
+    <None Remove="Images\boardgamePack_v2\PNG\Cards\cardSpades6.png" />
+    <None Remove="Images\boardgamePack_v2\PNG\Cards\cardSpades7.png" />
+    <None Remove="Images\boardgamePack_v2\PNG\Cards\cardSpades8.png" />
+    <None Remove="Images\boardgamePack_v2\PNG\Cards\cardSpades9.png" />
+    <None Remove="Images\boardgamePack_v2\PNG\Cards\cardSpadesA.png" />
+    <None Remove="Images\boardgamePack_v2\PNG\Cards\cardSpadesJ.png" />
+    <None Remove="Images\boardgamePack_v2\PNG\Cards\cardSpadesK.png" />
+    <None Remove="Images\boardgamePack_v2\PNG\Cards\cardSpadesQ.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Images\boardgamePack_v2\PNG\Cards\cardClubs10.png" />
+    <EmbeddedResource Include="Images\boardgamePack_v2\PNG\Cards\cardClubs2.png" />
+    <EmbeddedResource Include="Images\boardgamePack_v2\PNG\Cards\cardClubs3.png" />
+    <EmbeddedResource Include="Images\boardgamePack_v2\PNG\Cards\cardClubs4.png" />
+    <EmbeddedResource Include="Images\boardgamePack_v2\PNG\Cards\cardClubs5.png" />
+    <EmbeddedResource Include="Images\boardgamePack_v2\PNG\Cards\cardClubs6.png" />
+    <EmbeddedResource Include="Images\boardgamePack_v2\PNG\Cards\cardClubs7.png" />
+    <EmbeddedResource Include="Images\boardgamePack_v2\PNG\Cards\cardClubs8.png" />
+    <EmbeddedResource Include="Images\boardgamePack_v2\PNG\Cards\cardClubs9.png" />
+    <EmbeddedResource Include="Images\boardgamePack_v2\PNG\Cards\cardClubsA.png" />
+    <EmbeddedResource Include="Images\boardgamePack_v2\PNG\Cards\cardClubsJ.png" />
+    <EmbeddedResource Include="Images\boardgamePack_v2\PNG\Cards\cardClubsK.png" />
+    <EmbeddedResource Include="Images\boardgamePack_v2\PNG\Cards\cardClubsQ.png" />
+    <EmbeddedResource Include="Images\boardgamePack_v2\PNG\Cards\cardDiamonds10.png" />
+    <EmbeddedResource Include="Images\boardgamePack_v2\PNG\Cards\cardDiamonds2.png" />
+    <EmbeddedResource Include="Images\boardgamePack_v2\PNG\Cards\cardDiamonds3.png" />
+    <EmbeddedResource Include="Images\boardgamePack_v2\PNG\Cards\cardDiamonds4.png" />
+    <EmbeddedResource Include="Images\boardgamePack_v2\PNG\Cards\cardDiamonds5.png" />
+    <EmbeddedResource Include="Images\boardgamePack_v2\PNG\Cards\cardDiamonds6.png" />
+    <EmbeddedResource Include="Images\boardgamePack_v2\PNG\Cards\cardDiamonds7.png" />
+    <EmbeddedResource Include="Images\boardgamePack_v2\PNG\Cards\cardDiamonds8.png" />
+    <EmbeddedResource Include="Images\boardgamePack_v2\PNG\Cards\cardDiamonds9.png" />
+    <EmbeddedResource Include="Images\boardgamePack_v2\PNG\Cards\cardDiamondsA.png" />
+    <EmbeddedResource Include="Images\boardgamePack_v2\PNG\Cards\cardDiamondsJ.png" />
+    <EmbeddedResource Include="Images\boardgamePack_v2\PNG\Cards\cardDiamondsK.png" />
+    <EmbeddedResource Include="Images\boardgamePack_v2\PNG\Cards\cardDiamondsQ.png" />
+    <EmbeddedResource Include="Images\boardgamePack_v2\PNG\Cards\cardHearts10.png" />
+    <EmbeddedResource Include="Images\boardgamePack_v2\PNG\Cards\cardHearts2.png" />
+    <EmbeddedResource Include="Images\boardgamePack_v2\PNG\Cards\cardHearts3.png" />
+    <EmbeddedResource Include="Images\boardgamePack_v2\PNG\Cards\cardHearts4.png" />
+    <EmbeddedResource Include="Images\boardgamePack_v2\PNG\Cards\cardHearts5.png" />
+    <EmbeddedResource Include="Images\boardgamePack_v2\PNG\Cards\cardHearts6.png" />
+    <EmbeddedResource Include="Images\boardgamePack_v2\PNG\Cards\cardHearts7.png" />
+    <EmbeddedResource Include="Images\boardgamePack_v2\PNG\Cards\cardHearts8.png" />
+    <EmbeddedResource Include="Images\boardgamePack_v2\PNG\Cards\cardHearts9.png" />
+    <EmbeddedResource Include="Images\boardgamePack_v2\PNG\Cards\cardHeartsA.png" />
+    <EmbeddedResource Include="Images\boardgamePack_v2\PNG\Cards\cardHeartsJ.png" />
+    <EmbeddedResource Include="Images\boardgamePack_v2\PNG\Cards\cardHeartsK.png" />
+    <EmbeddedResource Include="Images\boardgamePack_v2\PNG\Cards\cardHeartsQ.png" />
+    <EmbeddedResource Include="Images\boardgamePack_v2\PNG\Cards\cardJoker.png" />
+    <EmbeddedResource Include="Images\boardgamePack_v2\PNG\Cards\cardSpades10.png" />
+    <EmbeddedResource Include="Images\boardgamePack_v2\PNG\Cards\cardSpades2.png" />
+    <EmbeddedResource Include="Images\boardgamePack_v2\PNG\Cards\cardSpades3.png" />
+    <EmbeddedResource Include="Images\boardgamePack_v2\PNG\Cards\cardSpades4.png" />
+    <EmbeddedResource Include="Images\boardgamePack_v2\PNG\Cards\cardSpades5.png" />
+    <EmbeddedResource Include="Images\boardgamePack_v2\PNG\Cards\cardSpades6.png" />
+    <EmbeddedResource Include="Images\boardgamePack_v2\PNG\Cards\cardSpades7.png" />
+    <EmbeddedResource Include="Images\boardgamePack_v2\PNG\Cards\cardSpades8.png" />
+    <EmbeddedResource Include="Images\boardgamePack_v2\PNG\Cards\cardSpades9.png" />
+    <EmbeddedResource Include="Images\boardgamePack_v2\PNG\Cards\cardSpadesA.png" />
+    <EmbeddedResource Include="Images\boardgamePack_v2\PNG\Cards\cardSpadesJ.png" />
+    <EmbeddedResource Include="Images\boardgamePack_v2\PNG\Cards\cardSpadesK.png" />
+    <EmbeddedResource Include="Images\boardgamePack_v2\PNG\Cards\cardSpadesQ.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Screenshots\" />
+  </ItemGroup>
+
+</Project>
