@@ -1,5 +1,9 @@
-Your post states that you want to be able to update a PictureBox when rows or cells are selected in a DataGridView.
-![screenshot]()
+Your post states that you want to be able to update a PictureBox when rows or cells are selected in a DataGridView. Handling the `SelectionChanged` event would be one way to achieve this outcome.
+
+[![screenshot][1]][1]
+
+***
+**DataBinding**
 
 The excellent comment by jmcilhinney suggests data binding. So how _exactly_ would you do that? Basically, you make a class to represent a row of data, for example:
 
@@ -53,12 +57,15 @@ Then you make a `BindingList<Card>` and assign it to the `DataSource` property o
         .
     }
 
-    ***
-    There also needs to be a reliable way to locate and load an image. One good way is to set the `Build Action` property of your images to `Embedded resource`.
+***
+**Load Images**
 
-![embed]()
+The other thing you need is some reliable way to locate and load an image. One good way is to set the `Build Action` property of your images to `Embedded resource`.
 
-    // Now the image can be retrieved based on the car's value and suit.
+[![embed images][2]][2]
+
+Now the image can be retrieved based on the car's value and suit.
+
     BindingList<Card> Cards = new BindingList<Card>();
     private Image getCardImage(Value value = Value.Joker, Suit? suit = null)
     {
@@ -88,3 +95,7 @@ Then you make a `BindingList<Card>` and assign it to the `DataSource` property o
         }
     }
     private Image getCardImage(Card card) => getCardImage(card.Value, card.Suit);
+
+
+  [1]: https://i.stack.imgur.com/tP7d0.png
+  [2]: https://i.stack.imgur.com/Rqq3J.png
