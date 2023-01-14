@@ -13,20 +13,32 @@ namespace select_picture_from_dgv
         protected override void OnLoad(EventArgs e)
         {
             base.OnLoad(e);
-            foreach (var card in GetType().Assembly.GetManifestResourceNames())
-            {
-
-            }
-            pictureBoxCard.Image = getCardImage(Value.Joker);
+            pictureBoxCard.Image = getCardImage(Value.Ace, Suite.Hearts);
         }
         private readonly string _imageBase;
         private Image getCardImage(Value value, Suite? suite = null)
         {
-            string fileName;
-            fileName = $"{_imageBase}.cardJoker.png";
-            using (var stream = GetType().Assembly.GetManifestResourceStream(fileName)!)
+            switch (value)
             {
-                return new Bitmap(stream);
+                case Value.Ace:
+                    return localFromResourceName($"{_imageBase}.card{suite}A.png");
+                case Value.Jack:
+                    return localFromResourceName($"{_imageBase}.card{suite}J.png");
+                case Value.Queen:
+                    return localFromResourceName($"{_imageBase}.card{suite}Q.png");
+                case Value.King:
+                    return localFromResourceName($"{_imageBase}.card{suite}K.png");
+                case Value.Joker:
+                    return localFromResourceName($"{_imageBase}.cardJoker.png");
+                default:
+                    return localFromResourceName($"{_imageBase}.card{suite}{(int)value}.png");
+            }
+            Image localFromResourceName(string resource)
+            {
+                using (var stream = GetType().Assembly.GetManifestResourceStream(resource)!)
+                {
+                    return new Bitmap(stream);
+                }
             }
         }
     }
