@@ -16,7 +16,7 @@ The excellent comment by jmcilhinney suggests data binding. So how _exactly_ wou
         public Suit Suit { get; internal set; }
     }
 
-Then you make a `BindingList<Card>` and assign it to the `DataSource` property of your DataGridView.
+Then you make a `BindingList<Card>` and assign it to the `DataSource` property of your DataGridView in the method that loads your main form class.
 
     public partial class MainForm : Form
     {
