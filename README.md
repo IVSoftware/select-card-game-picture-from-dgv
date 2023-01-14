@@ -1,4 +1,4 @@
-Your post states that you want to be able to update a PictureBox when rows or cells are selected in a DataGridView. Handling the `SelectionChanged` event would be one way to achieve this outcome.
+Your post states that you want to be able to update a PictureBox when rows or cells are selected in a DataGridView. Handling the `SelectionChanged` event is one way to achieve this outcome.
 
 [![screenshot][1]][1]
 
@@ -34,6 +34,7 @@ Then you make a `BindingList<Card>` and assign it to the `DataSource` property o
             dataGridViewCards.AllowUserToAddRows = false;
             dataGridViewCards.RowHeadersVisible = false;
             dataGridViewCards.DataSource = Cards;
+
             #region F O R M A T    C O L U M N S
             Cards.Add(new Card()); // <- Auto generate columns
             dataGridViewCards.Columns["Value"].AutoSizeMode= DataGridViewAutoSizeColumnMode.Fill;
@@ -96,6 +97,10 @@ Now the image can be retrieved based on the car's value and suit.
     }
     private Image getCardImage(Card card) => getCardImage(card.Value, card.Suit);
 
+***
+**Credit**
+
+The ace of diamonds image is from [Boardgame pack v2](https://opengameart.org/content/boardgame-pack) (Creative Commons License) by Kenney Vleugels.
 
   [1]: https://i.stack.imgur.com/tP7d0.png
   [2]: https://i.stack.imgur.com/Rqq3J.png
