@@ -35,11 +35,17 @@ namespace select_picture_from_dgv
             // Subscribe to the event when selection changes.
             dataGridViewCards.ClearSelection();
             dataGridViewCards.SelectionChanged += onSelectionChanged;
+            dataGridViewCards.CurrentCellChanged += onSelectionChanged;
+            pictureBoxCard.Click += (sender, e) => dataGridViewCards.CurrentCell = null;
         }
 
         private void onSelectionChanged(object? sender, EventArgs e)
         {
-            if(dataGridViewCards.CurrentCell != null)
+            if (dataGridViewCards.CurrentCell == null)
+            {
+                pictureBoxCard.Image = getCardImage(Value.Back);
+            }
+            else
             {
                 int row = dataGridViewCards.CurrentCell.RowIndex;
                 if((row != -1) && (row < Cards.Count)) 
@@ -78,7 +84,7 @@ namespace select_picture_from_dgv
         }
         private Image getCardImage(Card card) => getCardImage(card.Value, card.Suit);
     }
-    enum Value { Ace, Two, Three, Four, Five, Six, Seven, Eight, Nine, Ten, Jack, Queen, King, Joker, Back }
+    enum Value { Joker, Ace, Two, Three, Four, Five, Six, Seven, Eight, Nine, Ten, Jack, Queen, King, Back }
     enum Suit { Clubs, Diamonds, Hearts, Spades, }
     class Card
     {
