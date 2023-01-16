@@ -1,6 +1,13 @@
-Your post states that you want to be able to update a PictureBox when rows or cells are selected in a DataGridView. Handling the `SelectionChanged` event is one way to achieve this outcome.
+Your post states that you want to be able to update a PictureBox with an image of a trading card when rows or cells are selected in a DataGridView. Your latest comment indicates that other suggestions haven't helped so far. So, than trying to diagnose from your code sample what isn't working what I can offer is an example of what will.
+
+ Sometimes it's easier to test our coding assumptions by taking something that _works_ and introducing incremental changes until it _breaks_ so I would encourage you to [clone](https://github.com/IVSoftware/select-card-game-picture-from-dgv.git) my minimal sample and experiment with it.
+
+Handling the `SelectionChanged` event is one way to achieve this outcome and since I don't have easy access a license for _**trading**_ card images, I will demonstrate using an open source library for _**playing**_ cards instead.
 
 [![screenshot][1]][1]
+
+**Image credit**: [Boardgame pack v2](https://opengameart.org/content/boardgame-pack) (Creative Commons License) by Kenney Vleugels.
+
 
 ***
 **DataBinding**
@@ -120,10 +127,6 @@ Now the image can be retrieved based on the card's value and suit.
     }
     private Image getCardImage(Card card) => getCardImage(card.Value, card.Suit);
 
-***
-**Credit**
-
-Ace of diamonds image: [Boardgame pack v2](https://opengameart.org/content/boardgame-pack) (Creative Commons License) by Kenney Vleugels.
 
 
   [1]: https://i.stack.imgur.com/Q1rZh.png
